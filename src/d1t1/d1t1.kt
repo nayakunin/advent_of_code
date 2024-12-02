@@ -8,8 +8,7 @@ fun distance (a: Int, b: Int): Int {
 }
 
 fun main() {
-    val fileName = "src/input.txt"
-    val file = File(fileName)
+    val file = File("src/inputs/d1.txt")
     val regex = Regex("""(\d+)\s+(\d+)""")
 
     val arr1 = mutableListOf<Int>()
@@ -26,7 +25,7 @@ fun main() {
     arr1.sort()
     arr2.sort()
 
-    var sum = 0;
+    var sum = 0
 
     for (i in 0..<arr1.size) {
         sum += distance(arr1[i], arr2[i])

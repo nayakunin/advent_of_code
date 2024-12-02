@@ -3,8 +3,7 @@ package d1t2
 import java.io.File
 
 fun main() {
-    val fileName = "src/input.txt"
-    val file = File(fileName)
+    val file = File("src/inputs/d1.txt")
     val regex = Regex("""(\d+)\s+(\d+)""")
 
     val arr1 = mutableListOf<Int>()
@@ -21,7 +20,7 @@ fun main() {
         }
     }
 
-    var sum = 0;
+    var sum = 0
 
     for (i in 0..<arr1.size) {
 //        println("$i: ${arr1[i]} -> ${occurrencesMap[arr1[i]]}")
