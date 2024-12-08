@@ -11,8 +11,8 @@ enum class Direction {
 
 const val SIZE = 4
 
-fun execute() {
-    val file = File("src/inputs/d4e1.txt")
+fun main() {
+    val file = File("src/inputs/d4.txt")
     val matrix = mutableListOf<MutableList<Char>>()
     val matrix2 = mutableListOf<MutableList<Char>>()
 
@@ -84,7 +84,7 @@ fun execute() {
 
     for (y in 0..<matrix.size) {
         for (x in 0..<matrix[y].size) {
-            if (matrix[x][y] != 'X' && matrix[x][y] != 'S') {
+            if (matrix[y][x] != 'X' && matrix[y][x] != 'S') {
                 continue
             }
             for (direction in Direction.entries) {
@@ -101,8 +101,4 @@ fun execute() {
 
     println(count)
     println(matrix2.joinToString("\n") { it.joinToString("") })
-}
-
-fun main() {
-    execute()
 }
